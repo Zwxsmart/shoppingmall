@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+
+进入..........
+    <input type="button" onclick="ok1()" value="测试" />
+
+<script type="text/javascript" src="/aw/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+    function ok1(){
+        $.ajax({
+            url: '/test/user/delete?mobile1=123',
+            type: 'GET',
+            success: function (res) {
+               console.log(res);
+            },
+            error: function (err) {
+                console.log(err.responseText);
+            }
+        });
+    }
+</script>
+</body>
+</html>

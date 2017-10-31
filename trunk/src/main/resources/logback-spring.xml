@@ -1,0 +1,61 @@
+﻿<configuration>
+    <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,,,, -->
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <appender name="debugLog" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <springProfile name="dev,test"><!--测试或开发环境-->
+        <appender name="outFileLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <!-- <File>/home/log/logger-service/collectLog.log</File> -->
+            <File>/logs/shopping-mall/collectLog.log</File>
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <maxHistory>30</maxHistory>
+                <!--  <fileNamePattern>/home/log/logger-service/collectLog_%d{yyyy-MM-dd_HH}.archive</fileNamePattern> -->
+                <fileNamePattern>/logs/shopping-mall/collectLog_%d{yyyy-MM-dd_HH}.archive</fileNamePattern>
+            </rollingPolicy>
+            <encoder>
+                <pattern>
+                    %msg%n
+                </pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="CONSOLE" />
+        </root>
+
+        <logger name="com.lanwantec.manage.filter.LogCollectFilter" level="info" additivity="true">
+            <appender-ref ref="outFileLog" />
+        </logger>
+    </springProfile>
+
+
+    <springProfile name="prod"><!--线上环境-->
+        <appender name="outFileLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        	<!--日志存放路径 -->
+            <!-- <File>/logs/anyun/brandLog.log</File> -->
+            <File>/logs/shopping-mall/log/log.log</File>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <maxHistory>30</maxHistory>
+                <!-- <fileNamePattern>/logs/anyun/brandLog_%d{yyyy-MM-dd_HH}.archive</fileNamePattern> -->
+                <fileNamePattern>/logs/shopping-mall/log/log_%d{yyyy-MM-dd_HH}.archive</fileNamePattern>
+            </rollingPolicy>
+            <encoder>
+                <pattern>
+                    %msg%n
+                </pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="CONSOLE" />
+        </root>
+
+        <logger name="com.lanwantec" level="info" additivity="false">
+            <appender-ref ref="outFileLog" />
+        </logger>
+    </springProfile>
+</configuration>

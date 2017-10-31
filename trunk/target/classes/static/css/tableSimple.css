@@ -1,0 +1,44 @@
+.bootstrap-table .table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #6677b0;
+}
+.bootstrap-table .table>thead tr{
+    background-color: aliceblue
+}
+
+.bootstrap-table .bootstrap-table{
+    background-color: #0c0c0c;
+}
+.bootstrap-table .table tbody>tr>td {
+    vertical-align: middle;
+    border-bottom: 0px solid #6677b0;
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #f5f7fc;
+}
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.fixed-table-container{border: 0px solid #ddd; }
+.fixed-table-container thead th {border-left: 0px solid #ddd;}
+.fixed-table-container tbody td {border-left: 0px solid #ddd;}
+.bootstrap-table .table>thead>tr>th,.bootstrap-table .table>tbody>tr>th,.bootstrap-table .table>tfoot>tr>th, .bootstrap-table.table>thead>tr>td,.bootstrap-table .table>tbody>tr>td,.bootstrap-table .table>tfoot>tr>td {
+    border-top: 0px solid #6677b0;
+}
+
+.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner{
+    text-align: center;
+}
+
+.bootstrap-table .table {  border-bottom: 0px solid #ddd; }
+
+.fixed-table-footer {
+    margin-top:0px;
+    border-top: 1px solid #b1bde3;
+}
+
+tr{
+    text-align: center;
+}

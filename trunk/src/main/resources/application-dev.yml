@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.210:3306/blue_shopping
+    username: shopping
+    password: 1MTXO790
+    initialSize: 2
+    maxActive: 20
+    minIdle: 0
+    maxWait: 60000
+    validationQuery: SELECT 1
+    testOnBorrow: false
+    testWhileIdle: true
+    poolPreparedStatements: false
+
+logging:
+  config: classpath:logback-spring.xml
+#  level:
+#    org:
+#      springframework:
+#        jdbc:
+#          core:
+#            JdbcTemplate: debug
+#    log: debug
+
+brand:
+    rootPath: /images/resource/upload/userupload/shopping/
+    imgPath: http://192.168.1.210/shopping/

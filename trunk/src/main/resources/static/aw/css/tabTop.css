@@ -1,0 +1,253 @@
+#tabs-content {
+    margin-left: 180px;
+}
+
+/*tabs*/
+.lazyContainer {
+    width: 1700px;
+    height: 2000px;
+    border: 1px solid #765;
+    /*margin: 6px;*/
+    float: left;
+    position: relative;
+}
+
+.content-tab {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bor {
+    margin-top: 20px;
+    border: 1px solid #765;
+}
+
+.bor-left {
+    float: left;
+    margin-left: 50px;
+}
+
+.bor-right {
+    float: left;
+    margin-left: 7px;
+}
+
+.bor-bottom {
+    margin-top: -1px;
+    border: 1px solid #765;
+}
+
+.triangle-left {
+    width: 0px;
+    height: 0px;
+    *width: 40px;
+    *height: 40px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border-width: 20px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent #797979 transparent transparent;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.triangle-right {
+    width: 0px;
+    height: 0px;
+    *width: 40px;
+    *height: 40px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border-width: 20px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent transparent #797979;
+    margin-bottom: 20px;
+    margin-right: 20px;;
+}
+
+.col-content {
+    width: 288px;
+    float: left;
+}
+
+.text-content {
+    width: 295px;
+    margin-left: -15px;
+    float: left;
+    /*width: 100%;*/
+}
+
+.text-right {
+    margin-top: 14px;
+}
+
+.small-value {
+    height: 150px;
+    text-align: center;
+}
+
+.lazyTabContentsTop {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F8FF;
+    display: none;
+    margin: 0;
+    cursor: auto;
+}
+
+.lazyTabHeaderTop {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #FFF;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #B9D3EE;
+}
+
+.lazyTabHeaderTop ul {
+    position: relative;
+    width: 5000px;
+    background-color: #C6E2FF;
+    margin: 0;
+    border-bottom: 1px solid #B9D3EE;
+    font: 12px sans-serif;
+    padding: 10px 0 0;
+}
+
+.lazyTabHeaderTop li {
+    display: block;
+    float: left;
+    background: transparent url("../img/tabTop.png") no-repeat 0 0;
+    margin: 0 1px;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
+.lazyTabHeaderTop .lazyTabLink {
+    width: auto;
+    display: block;
+    background: transparent url("../img/tabTop.png") no-repeat right -120px;
+    padding: 0 10px 0 0;
+    text-decoration: none;
+    color: #43798B;
+    outline: none;
+}
+
+.lazyTabHeaderTop .lazyTabLink span {
+    padding: 4px 16px 5px 0;
+    background: transparent url("../img/tabTop.png") repeat-x 0 -60px;
+    display: block;
+}
+
+.lazyTabHeaderTop .active {
+    position: relative;
+    top: 1px;
+    background: url("../img/tabTop.png") no-repeat 0 -180px;
+    border-width: 0;
+    margin-bottom: -1px;
+}
+
+.lazyTabHeaderTop .active .lazyTabLink {
+    background: transparent url("../img/tabTop.png") no-repeat right -300px;
+    color: #43798B;
+    font-weight: bold;
+}
+
+.lazyTabHeaderTop .active span {
+    background: transparent url("../img/tabTop.png") repeat-x 0 -240px;
+    padding-bottom: 5px;
+}
+
+.lazyTabHeaderTop li:hover, .lazyTabHeaderTop li.hover {
+    background: transparent url("../img/tabTop.png") no-repeat 0 -360px;
+}
+
+.lazyTabHeaderTop li:hover .lazyTabLink, .lazyTabHeaderTop li.hover .lazyTabLink {
+    background: transparent url("../img/tabTop.png") no-repeat right -480px;
+}
+
+.lazyTabHeaderTop li.hover span {
+    background: transparent url("../img/tabTop.png") repeat-x 0 -420px;
+}
+
+/* close button style*/
+
+.lazyTabHeaderTop a.lazyTabClose {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    float: left;
+    background: url("../img/closebg.png") no-repeat left top;
+}
+
+.lazyTabHeaderTop li:hover .lazyTabClose:hover, .lazyTabHeaderTop li.hover .lazyTabClose.hover {
+    background: url("../img/closebg.png") no-repeat -15px 0px;
+}
+
+.lazyTabHeaderTop .lazyTabScroll {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.lazyTabHeaderTop .scrollLeft {
+    background: #C6E2FF url(../img/arrow.png) no-repeat scroll -104px center;
+    border-right: 1px solid #B9D3EE;
+    border-bottom: 1px solid #B9D3EE;
+    width: 17px;
+    height: 100%;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.lazyTabHeaderTop .scrollRight {
+    background: #C6E2FF url(../img/arrow.png) no-repeat -40px center;
+    border-left: 1px solid #B9D3EE;
+    border-bottom: 1px solid #B9D3EE;
+    width: 17px;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.lazyTabHeaderTop .scrollLeft:hover, .lazyTabHeaderTop .scrollLeft.hover,
+.lazyTabHeaderTop .scrollRight:hover, .lazyTabHeaderTop .scrollRight.hover {
+    /*	background-position: 0 center;*/
+}
+
+.lazyTabHeaderTop .disabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.loading {
+    border: 1px solid gray;
+    width: 80px;
+    height: 40px;
+    v-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -20px;
+    background: url("../img/loading.gif") no-repeat 0 center;
+    padding-left: 31px;
+}

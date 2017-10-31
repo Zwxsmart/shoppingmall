@@ -1,0 +1,16 @@
+server:
+  port: 12080
+  error:
+    path: /error/error
+
+spring:
+  profiles:
+    active: test
+  http:
+      multipart:
+        enabled: true
+        max-file-size: 20MB
+        max-request-size: 20MB
+brand:
+    rootPath: target/classes/static/
+    imgPath:
